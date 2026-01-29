@@ -1,0 +1,30 @@
+[
+    {
+        "id": "pt1",
+        "providerId": "p1",
+        "imageUrl": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=300&auto=format&fit=crop",
+        "title": "Instalación de Tablero",
+        "description": "Instalación completa de tablero eléctrico residencial con breakers de seguridad."
+    },
+    {
+        "id": "pt2",
+        "providerId": "p1",
+        "imageUrl": "https://images.unsplash.com/photo-1558402529-d2638a7023e9?q=80&w=300&auto=format&fit=crop",
+        "title": "Iluminación LED",
+        "description": "Diseño e instalación de iluminación empotrada LED en sala principal."
+    },
+    {
+        "id": "pt3",
+        "providerId": "p2",
+        "imageUrl": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=300&auto=format&fit=crop",
+        "title": "Reparación de Tubería",
+        "description": "Detección de fuga y reemplazo de tubería de cobre en baño principal."
+    },
+    {
+        "id": "pt4",
+        "providerId": "p3",
+        "imageUrl": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?q=80&w=300&auto=format&fit=crop",
+        "title": "Ajuste de Motor",
+        "description": "Mantenimiento preventivo y ajuste de tiempo en motor de camioneta 4x4."
+    }
+]

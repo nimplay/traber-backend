@@ -1,0 +1,27 @@
+[
+    {
+        "id": "b1",
+        "name": "Identidad Verificada",
+        "icon": "ShieldCheck"
+    },
+    {
+        "id": "b2",
+        "name": "Top Rated",
+        "icon": "Star"
+    },
+    {
+        "id": "b3",
+        "name": "Seguro al Día",
+        "icon": "Award"
+    },
+    {
+        "id": "b4",
+        "name": "Experto Truber",
+        "icon": "Zap"
+    },
+    {
+        "id": "b5",
+        "name": "Certificado",
+        "icon": "CheckCircle"
+    }
+]

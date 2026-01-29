@@ -1,0 +1,29 @@
+[
+    {
+        "id": "r1",
+        "providerId": "p1",
+        "userId": "c1",
+        "userName": "Ana García",
+        "comment": "Excelente trabajo eléctrico, muy puntual.",
+        "rating": 5,
+        "date": "2024-03-15"
+    },
+    {
+        "id": "r2",
+        "providerId": "p1",
+        "userId": "c1",
+        "userName": "Pedro Perez",
+        "comment": "Resolvió el cortocircuito rápidamente.",
+        "rating": 4.5,
+        "date": "2024-03-10"
+    },
+    {
+        "id": "r3",
+        "providerId": "p2",
+        "userId": "c1",
+        "userName": "Maria Lopez",
+        "comment": "Muy profesional reparando la tubería.",
+        "rating": 5,
+        "date": "2024-03-01"
+    }
+]

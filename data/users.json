@@ -1,0 +1,920 @@
+[
+    {
+        "id": "u1",
+        "name": "Admin User",
+        "email": "admin@truber.com",
+        "password": "1234",
+        "role": "admin",
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "createdAt": "2024-01-01T00:00:00Z"
+    },
+    {
+        "id": "c1",
+        "name": "Ana García",
+        "email": "ana@test.com",
+        "password": "1234",
+        "role": "client",
+        "image": "https://randomuser.me/api/portraits/women/1.jpg",
+        "createdAt": "2024-01-01T00:00:00Z"
+    },
+    {
+        "id": "p1",
+        "name": "Carlos Rodríguez",
+        "email": "carlos.r@truber.com",
+        "password": "1234",
+        "type": "electric",
+        "role": "provider",
+        "rating": 4.9,
+        "jobs": 142,
+        "latitude": 10.344,
+        "longitude": -67.042,
+        "image": "https://randomuser.me/api/portraits/men/32.jpg",
+        "about": "Especialista en instalaciones residenciales y comerciales.",
+        "hourly_rate": {
+            "min": 13,
+            "max": 26
+        }
+    },
+    {
+        "id": "p2",
+        "name": "Jorge Pérez",
+        "email": "jorge.p@truber.com",
+        "password": "1234",
+        "type": "plumbing",
+        "role": "provider",
+        "rating": 4.7,
+        "jobs": 89,
+        "latitude": 10.348,
+        "longitude": -67.038,
+        "image": "https://randomuser.me/api/portraits/men/45.jpg",
+        "about": "Experto en tuberías de alta presión.",
+        "hourly_rate": {
+            "min": 20,
+            "max": 27
+        }
+    },
+    {
+        "id": "p3",
+        "name": "Luis Martínez",
+        "email": "luis.m@truber.com",
+        "password": "1234",
+        "type": "mechanic",
+        "role": "provider",
+        "rating": 4.8,
+        "jobs": 210,
+        "latitude": 10.339,
+        "longitude": -67.048,
+        "image": "https://randomuser.me/api/portraits/men/12.jpg",
+        "about": "Mecánica ligera y pesada a domicilio.",
+        "hourly_rate": {
+            "min": 13,
+            "max": 28
+        }
+    },
+    {
+        "id": "p4",
+        "name": "Ricardo Gómez",
+        "email": "ricardo.g@truber.com",
+        "password": "1234",
+        "type": "construction",
+        "role": "provider",
+        "rating": 4.5,
+        "jobs": 34,
+        "latitude": 10.3415,
+        "longitude": -67.035,
+        "image": "https://randomuser.me/api/portraits/men/22.jpg",
+        "about": "Remodelaciones y drywall.",
+        "hourly_rate": {
+            "min": 22,
+            "max": 37
+        }
+    },
+    {
+        "id": "p5",
+        "name": "Miguel Torres",
+        "email": "miguel.t@truber.com",
+        "password": "1234",
+        "type": "electric",
+        "role": "provider",
+        "rating": 4.6,
+        "jobs": 67,
+        "latitude": 10.3465,
+        "longitude": -67.045,
+        "image": "https://randomuser.me/api/portraits/men/1.jpg",
+        "about": "Reparación de motores industriales.",
+        "hourly_rate": {
+            "min": 10,
+            "max": 16
+        }
+    },
+    {
+        "id": "p6",
+        "name": "Elena Blanco",
+        "email": "elena.b@truber.com",
+        "password": "1234",
+        "type": "electric",
+        "role": "provider",
+        "rating": 5.0,
+        "jobs": 45,
+        "latitude": 10.352,
+        "longitude": -67.041,
+        "image": "https://randomuser.me/api/portraits/women/10.jpg",
+        "about": "Domótica y electricidad inteligente.",
+        "hourly_rate": {
+            "min": 10,
+            "max": 18
+        }
+    },
+    {
+        "id": "p7",
+        "name": "Andrés Silva",
+        "email": "andres.s@truber.com",
+        "password": "1234",
+        "type": "plumbing",
+        "role": "provider",
+        "rating": 4.4,
+        "jobs": 112,
+        "latitude": 10.335,
+        "longitude": -67.039,
+        "image": "https://randomuser.me/api/portraits/men/15.jpg",
+        "about": "Fontanería general.",
+        "hourly_rate": {
+            "min": 12,
+            "max": 23
+        }
+    },
+    {
+        "id": "p8",
+        "name": "Sofía Méndez",
+        "email": "sofia.m@truber.com",
+        "password": "1234",
+        "type": "plumbing",
+        "role": "provider",
+        "rating": 4.9,
+        "jobs": 56,
+        "latitude": 10.355,
+        "longitude": -67.036,
+        "image": "https://randomuser.me/api/portraits/women/22.jpg",
+        "about": "Filtraciones y humedades.",
+        "hourly_rate": {
+            "min": 15,
+            "max": 23
+        }
+    },
+    {
+        "id": "p9",
+        "name": "Gabriel Ruiz",
+        "email": "gabriel.r@truber.com",
+        "password": "1234",
+        "type": "mechanic",
+        "role": "provider",
+        "rating": 4.7,
+        "jobs": 134,
+        "latitude": 10.332,
+        "longitude": -67.052,
+        "image": "https://randomuser.me/api/portraits/men/33.jpg",
+        "about": "Mecánico diesel de camiones.",
+        "hourly_rate": {
+            "min": 15,
+            "max": 24
+        }
+    },
+    {
+        "id": "p10",
+        "name": "Paola Castillo",
+        "email": "paola.c@truber.com",
+        "password": "1234",
+        "type": "mechanic",
+        "role": "provider",
+        "rating": 4.8,
+        "jobs": 88,
+        "latitude": 10.3385,
+        "longitude": -67.055,
+        "image": "https://randomuser.me/api/portraits/women/33.jpg",
+        "about": "Especialista en electroauto.",
+        "hourly_rate": {
+            "min": 23,
+            "max": 32
+        }
+    },
+    {
+        "id": "p11",
+        "name": "Roberto Diaz",
+        "email": "roberto.d@truber.com",
+        "password": "1234",
+        "type": "construction",
+        "role": "provider",
+        "rating": 4.9,
+        "jobs": 25,
+        "latitude": 10.358,
+        "longitude": -67.045,
+        "image": "https://randomuser.me/api/portraits/men/44.jpg",
+        "about": "Arquitecto constructor.",
+        "hourly_rate": {
+            "min": 10,
+            "max": 17
+        }
+    },
+    {
+        "id": "p12",
+        "name": "Carmen Sosa",
+        "email": "carmen.s@truber.com",
+        "password": "1234",
+        "type": "construction",
+        "role": "provider",
+        "rating": 4.6,
+        "jobs": 72,
+        "latitude": 10.345,
+        "longitude": -67.032,
+        "image": "https://randomuser.me/api/portraits/women/45.jpg",
+        "about": "Pintura y acabados de lujo.",
+        "hourly_rate": {
+            "min": 11,
+            "max": 16
+        }
+    },
+    {
+        "id": "p13",
+        "name": "Jose Hernandez",
+        "email": "jose.h@truber.com",
+        "password": "1234",
+        "type": "electric",
+        "role": "provider",
+        "rating": 4.3,
+        "jobs": 30,
+        "latitude": 10.342,
+        "longitude": -67.045,
+        "image": "https://randomuser.me/api/portraits/men/34.jpg",
+        "about": "Electricista residencial.",
+        "hourly_rate": {
+            "min": 11,
+            "max": 24
+        }
+    },
+    {
+        "id": "p14",
+        "name": "Maria Lopez",
+        "email": "maria.l@truber.com",
+        "password": "1234",
+        "type": "plumbing",
+        "role": "provider",
+        "rating": 4.5,
+        "jobs": 45,
+        "latitude": 10.347,
+        "longitude": -67.035,
+        "image": "https://randomuser.me/api/portraits/women/34.jpg",
+        "about": "Plomería express.",
+        "hourly_rate": {
+            "min": 14,
+            "max": 29
+        }
+    },
+    {
+        "id": "p15",
+        "name": "Juan Sanchez",
+        "email": "juan.s@truber.com",
+        "password": "1234",
+        "type": "mechanic",
+        "role": "provider",
+        "rating": 4.2,
+        "jobs": 60,
+        "latitude": 10.335,
+        "longitude": -67.045,
+        "image": "https://randomuser.me/api/portraits/men/35.jpg",
+        "about": "Mecánica general.",
+        "hourly_rate": {
+            "min": 10,
+            "max": 16
+        }
+    },
+    {
+        "id": "p16",
+        "name": "Laura Perez",
+        "email": "laura.p@truber.com",
+        "password": "1234",
+        "type": "construction",
+        "role": "provider",
+        "rating": 4.7,
+        "jobs": 20,
+        "latitude": 10.34,
+        "longitude": -67.03,
+        "image": "https://randomuser.me/api/portraits/women/35.jpg",
+        "about": "Reformas integrales.",
+        "hourly_rate": {
+            "min": 20,
+            "max": 27
+        }
+    },
+    {
+        "id": "p17",
+        "name": "Pedro Gomez",
+        "email": "pedro.g@truber.com",
+        "password": "1234",
+        "type": "electric",
+        "role": "provider",
+        "rating": 4.1,
+        "jobs": 25,
+        "latitude": 10.35,
+        "longitude": -67.04,
+        "image": "https://randomuser.me/api/portraits/men/36.jpg",
+        "about": "Técnico eléctrico.",
+        "hourly_rate": {
+            "min": 12,
+            "max": 27
+        }
+    },
+    {
+        "id": "p18",
+        "name": "Ana Ruiz",
+        "email": "ana.r@truber.com",
+        "password": "1234",
+        "type": "plumbing",
+        "role": "provider",
+        "rating": 4.6,
+        "jobs": 50,
+        "latitude": 10.345,
+        "longitude": -67.038,
+        "image": "https://randomuser.me/api/portraits/women/36.jpg",
+        "about": "Servicios de fontanería.",
+        "hourly_rate": {
+            "min": 24,
+            "max": 37
+        }
+    },
+    {
+        "id": "p19",
+        "name": "Luis Garcia",
+        "email": "luis.g@truber.com",
+        "password": "1234",
+        "type": "mechanic",
+        "role": "provider",
+        "rating": 4.8,
+        "jobs": 80,
+        "latitude": 10.338,
+        "longitude": -67.042,
+        "image": "https://randomuser.me/api/portraits/men/37.jpg",
+        "about": "Experto en transmisiones.",
+        "hourly_rate": {
+            "min": 10,
+            "max": 23
+        }
+    },
+    {
+        "id": "p20",
+        "name": "Marta Diaz",
+        "email": "marta.d@truber.com",
+        "password": "1234",
+        "type": "construction",
+        "role": "provider",
+        "rating": 4.4,
+        "jobs": 15,
+        "latitude": 10.342,
+        "longitude": -67.048,
+        "image": "https://randomuser.me/api/portraits/women/37.jpg",
+        "about": "Albañilería y pintura.",
+        "hourly_rate": {
+            "min": 18,
+            "max": 28
+        }
+    },
+    {
+        "id": "p21",
+        "name": "Carlos Sosa",
+        "email": "carlos.s@truber.com",
+        "password": "1234",
+        "type": "electric",
+        "role": "provider",
+        "rating": 4.5,
+        "jobs": 40,
+        "latitude": 10.33,
+        "longitude": -67.04,
+        "image": "https://randomuser.me/api/portraits/men/38.jpg",
+        "about": "Instalaciones eléctricas.",
+        "hourly_rate": {
+            "min": 19,
+            "max": 34
+        }
+    },
+    {
+        "id": "p22",
+        "name": "Sofia Hernandez",
+        "email": "sofia.h@truber.com",
+        "password": "1234",
+        "type": "plumbing",
+        "role": "provider",
+        "rating": 4.7,
+        "jobs": 35,
+        "latitude": 10.355,
+        "longitude": -67.045,
+        "image": "https://randomuser.me/api/portraits/women/38.jpg",
+        "about": "Destapes y filtraciones.",
+        "hourly_rate": {
+            "min": 13,
+            "max": 23
+        }
+    },
+    {
+        "id": "p23",
+        "name": "Jorge Lopez",
+        "email": "jorge.l@truber.com",
+        "password": "1234",
+        "type": "mechanic",
+        "role": "provider",
+        "rating": 4.3,
+        "jobs": 55,
+        "latitude": 10.348,
+        "longitude": -67.05,
+        "image": "https://randomuser.me/api/portraits/men/39.jpg",
+        "about": "Frenos y suspensión.",
+        "hourly_rate": {
+            "min": 24,
+            "max": 38
+        }
+    },
+    {
+        "id": "p24",
+        "name": "Elena Martinez",
+        "email": "elena.m@truber.com",
+        "password": "1234",
+        "type": "construction",
+        "role": "provider",
+        "rating": 4.9,
+        "jobs": 10,
+        "latitude": 10.34,
+        "longitude": -67.055,
+        "image": "https://randomuser.me/api/portraits/women/39.jpg",
+        "about": "Maestra de obras.",
+        "hourly_rate": {
+            "min": 23,
+            "max": 33
+        }
+    },
+    {
+        "id": "p25",
+        "name": "Miguel Sanchez",
+        "email": "miguel.s@truber.com",
+        "password": "1234",
+        "type": "electric",
+        "role": "provider",
+        "rating": 4.2,
+        "jobs": 20,
+        "latitude": 10.352,
+        "longitude": -67.03,
+        "image": "https://randomuser.me/api/portraits/men/40.jpg",
+        "about": "Electricista industrial.",
+        "hourly_rate": {
+            "min": 17,
+            "max": 22
+        }
+    },
+    {
+        "id": "p26",
+        "name": "Paola Perez",
+        "email": "paola.p@truber.com",
+        "password": "1234",
+        "type": "plumbing",
+        "role": "provider",
+        "rating": 4.8,
+        "jobs": 65,
+        "latitude": 10.345,
+        "longitude": -67.032,
+        "image": "https://randomuser.me/api/portraits/women/40.jpg",
+        "about": "Plomera certificada.",
+        "hourly_rate": {
+            "min": 15,
+            "max": 24
+        }
+    },
+    {
+        "id": "p27",
+        "name": "Andres Gomez",
+        "email": "andres.g@truber.com",
+        "password": "1234",
+        "type": "mechanic",
+        "role": "provider",
+        "rating": 4.1,
+        "jobs": 45,
+        "latitude": 10.335,
+        "longitude": -67.038,
+        "image": "https://randomuser.me/api/portraits/men/41.jpg",
+        "about": "Tuning y mecánica.",
+        "hourly_rate": {
+            "min": 16,
+            "max": 23
+        }
+    },
+    {
+        "id": "p28",
+        "name": "Laura Ruiz",
+        "email": "laura.r@truber.com",
+        "password": "1234",
+        "type": "construction",
+        "role": "provider",
+        "rating": 4.6,
+        "jobs": 30,
+        "latitude": 10.338,
+        "longitude": -67.049,
+        "image": "https://randomuser.me/api/portraits/women/41.jpg",
+        "about": "Diseño de interiores.",
+        "hourly_rate": {
+            "min": 17,
+            "max": 23
+        }
+    },
+    {
+        "id": "p29",
+        "name": "Juan Sosa",
+        "email": "juan.so@truber.com",
+        "password": "1234",
+        "type": "electric",
+        "role": "provider",
+        "rating": 4.7,
+        "jobs": 50,
+        "latitude": 10.343,
+        "longitude": -67.041,
+        "image": "https://randomuser.me/api/portraits/men/42.jpg",
+        "about": "Mantenimiento eléctrico.",
+        "hourly_rate": {
+            "min": 12,
+            "max": 20
+        }
+    },
+    {
+        "id": "p30",
+        "name": "Marta Hernandez",
+        "email": "marta.h@truber.com",
+        "password": "1234",
+        "type": "plumbing",
+        "role": "provider",
+        "rating": 4.4,
+        "jobs": 40,
+        "latitude": 10.349,
+        "longitude": -67.043,
+        "image": "https://randomuser.me/api/portraits/women/42.jpg",
+        "about": "Instalaciones sanitarias.",
+        "hourly_rate": {
+            "min": 21,
+            "max": 31
+        }
+    },
+    {
+        "id": "p31",
+        "name": "Luis Lopez",
+        "email": "luis.l@truber.com",
+        "password": "1234",
+        "type": "mechanic",
+        "role": "provider",
+        "rating": 4.5,
+        "jobs": 70,
+        "latitude": 10.337,
+        "longitude": -67.044,
+        "image": "https://randomuser.me/api/portraits/men/43.jpg",
+        "about": "Mecánica rápida.",
+        "hourly_rate": {
+            "min": 15,
+            "max": 25
+        }
+    },
+    {
+        "id": "p32",
+        "name": "Carmen Martinez",
+        "email": "carmen.m@truber.com",
+        "password": "1234",
+        "type": "construction",
+        "role": "provider",
+        "rating": 4.3,
+        "jobs": 25,
+        "latitude": 10.346,
+        "longitude": -67.046,
+        "image": "https://randomuser.me/api/portraits/women/43.jpg",
+        "about": "Pintura y muros.",
+        "hourly_rate": {
+            "min": 11,
+            "max": 20
+        }
+    },
+    {
+        "id": "p33",
+        "name": "Jose Sanchez",
+        "email": "jose.s@truber.com",
+        "password": "1234",
+        "type": "electric",
+        "role": "provider",
+        "rating": 4.8,
+        "jobs": 15,
+        "latitude": 10.341,
+        "longitude": -67.037,
+        "image": "https://randomuser.me/api/portraits/men/44.jpg",
+        "about": "Cableado estructurado.",
+        "hourly_rate": {
+            "min": 23,
+            "max": 33
+        }
+    },
+    {
+        "id": "p34",
+        "name": "Maria Perez",
+        "email": "maria.p@truber.com",
+        "password": "1234",
+        "type": "plumbing",
+        "role": "provider",
+        "rating": 4.2,
+        "jobs": 10,
+        "latitude": 10.339,
+        "longitude": -67.033,
+        "image": "https://randomuser.me/api/portraits/women/45.jpg",
+        "about": "Plomería residencial.",
+        "hourly_rate": {
+            "min": 25,
+            "max": 38
+        }
+    },
+    {
+        "id": "p35",
+        "name": "Juan Gomez",
+        "email": "juan.g@truber.com",
+        "password": "1234",
+        "type": "mechanic",
+        "role": "provider",
+        "rating": 4.9,
+        "jobs": 90,
+        "latitude": 10.334,
+        "longitude": -67.047,
+        "image": "https://randomuser.me/api/portraits/men/46.jpg",
+        "about": "Especialista en motores.",
+        "hourly_rate": {
+            "min": 22,
+            "max": 36
+        }
+    },
+    {
+        "id": "p36",
+        "name": "Laura Hernandez",
+        "email": "laura.h@truber.com",
+        "password": "1234",
+        "type": "construction",
+        "role": "provider",
+        "rating": 4.5,
+        "jobs": 20,
+        "latitude": 10.344,
+        "longitude": -67.051,
+        "image": "https://randomuser.me/api/portraits/women/46.jpg",
+        "about": "Arquitectura moderna.",
+        "hourly_rate": {
+            "min": 11,
+            "max": 19
+        }
+    },
+    {
+        "id": "p37",
+        "name": "Pedro Ruiz",
+        "email": "pedro.r@truber.com",
+        "password": "1234",
+        "type": "electric",
+        "role": "provider",
+        "rating": 4.6,
+        "jobs": 35,
+        "latitude": 10.351,
+        "longitude": -67.052,
+        "image": "https://randomuser.me/api/portraits/men/47.jpg",
+        "about": "Servicios eléctricos.",
+        "hourly_rate": {
+            "min": 17,
+            "max": 28
+        }
+    },
+    {
+        "id": "p38",
+        "name": "Ana Sosa",
+        "email": "ana.s@truber.com",
+        "password": "1234",
+        "type": "plumbing",
+        "role": "provider",
+        "rating": 4.1,
+        "jobs": 15,
+        "latitude": 10.353,
+        "longitude": -67.048,
+        "image": "https://randomuser.me/api/portraits/women/47.jpg",
+        "about": "Bombas de agua.",
+        "hourly_rate": {
+            "min": 24,
+            "max": 35
+        }
+    },
+    {
+        "id": "p39",
+        "name": "Luis Hernandez",
+        "email": "luis.h@truber.com",
+        "password": "1234",
+        "type": "mechanic",
+        "role": "provider",
+        "rating": 4.7,
+        "jobs": 75,
+        "latitude": 10.331,
+        "longitude": -67.042,
+        "image": "https://randomuser.me/api/portraits/men/48.jpg",
+        "about": "Automotriz integral.",
+        "hourly_rate": {
+            "min": 20,
+            "max": 31
+        }
+    },
+    {
+        "id": "p40",
+        "name": "Marta Lopez",
+        "email": "marta.l@truber.com",
+        "password": "1234",
+        "type": "construction",
+        "role": "provider",
+        "rating": 4.8,
+        "jobs": 12,
+        "latitude": 10.336,
+        "longitude": -67.035,
+        "image": "https://randomuser.me/api/portraits/women/48.jpg",
+        "about": "Diseño y obra.",
+        "hourly_rate": {
+            "min": 14,
+            "max": 24
+        }
+    },
+    {
+        "id": "p41",
+        "name": "Carlos Martinez",
+        "email": "carlos.m@truber.com",
+        "password": "1234",
+        "type": "electric",
+        "role": "provider",
+        "rating": 4.2,
+        "jobs": 25,
+        "latitude": 10.34,
+        "longitude": -67.031,
+        "image": "https://randomuser.me/api/portraits/men/49.jpg",
+        "about": "Técnico instalador.",
+        "hourly_rate": {
+            "min": 19,
+            "max": 24
+        }
+    },
+    {
+        "id": "p42",
+        "name": "Sofia Sanchez",
+        "email": "sofia.s@truber.com",
+        "password": "1234",
+        "type": "plumbing",
+        "role": "provider",
+        "rating": 4.9,
+        "jobs": 55,
+        "latitude": 10.347,
+        "longitude": -67.039,
+        "image": "https://randomuser.me/api/portraits/women/49.jpg",
+        "about": "Fontanería experta.",
+        "hourly_rate": {
+            "min": 23,
+            "max": 35
+        }
+    },
+    {
+        "id": "p43",
+        "name": "Jorge Perez",
+        "email": "jorge.pe@truber.com",
+        "password": "1234",
+        "type": "mechanic",
+        "role": "provider",
+        "rating": 4.5,
+        "jobs": 60,
+        "latitude": 10.332,
+        "longitude": -67.043,
+        "image": "https://randomuser.me/api/portraits/men/50.jpg",
+        "about": "Mecánico general.",
+        "hourly_rate": {
+            "min": 19,
+            "max": 34
+        }
+    },
+    {
+        "id": "p44",
+        "name": "Elena Gomez",
+        "email": "elena.g@truber.com",
+        "password": "1234",
+        "type": "construction",
+        "role": "provider",
+        "rating": 4.7,
+        "jobs": 18,
+        "latitude": 10.342,
+        "longitude": -67.041,
+        "image": "https://randomuser.me/api/portraits/women/50.jpg",
+        "about": "Drywall y techos.",
+        "hourly_rate": {
+            "min": 12,
+            "max": 22
+        }
+    },
+    {
+        "id": "p45",
+        "name": "Miguel Ruiz",
+        "email": "miguel.r@truber.com",
+        "password": "1234",
+        "type": "electric",
+        "role": "provider",
+        "rating": 4.4,
+        "jobs": 30,
+        "latitude": 10.344,
+        "longitude": -67.036,
+        "image": "https://randomuser.me/api/portraits/men/51.jpg",
+        "about": "Sistemas de potencia.",
+        "hourly_rate": {
+            "min": 18,
+            "max": 31
+        }
+    },
+    {
+        "id": "p46",
+        "name": "Paola Hernandez",
+        "email": "paola.h@truber.com",
+        "password": "1234",
+        "type": "plumbing",
+        "role": "provider",
+        "rating": 4.1,
+        "jobs": 10,
+        "latitude": 10.338,
+        "longitude": -67.034,
+        "image": "https://randomuser.me/api/portraits/women/51.jpg",
+        "about": "Plomería básica.",
+        "hourly_rate": {
+            "min": 21,
+            "max": 33
+        }
+    },
+    {
+        "id": "p47",
+        "name": "Andres Sosa",
+        "email": "andres.so@truber.com",
+        "password": "1234",
+        "type": "mechanic",
+        "role": "provider",
+        "rating": 4.6,
+        "jobs": 40,
+        "latitude": 10.349,
+        "longitude": -67.04,
+        "image": "https://randomuser.me/api/portraits/men/52.jpg",
+        "about": "Latonería y pintura.",
+        "hourly_rate": {
+            "min": 10,
+            "max": 16
+        }
+    },
+    {
+        "id": "p48",
+        "name": "Laura Lopez",
+        "email": "laura.l@truber.com",
+        "password": "1234",
+        "type": "construction",
+        "role": "provider",
+        "rating": 4.3,
+        "jobs": 15,
+        "latitude": 10.355,
+        "longitude": -67.037,
+        "image": "https://randomuser.me/api/portraits/women/52.jpg",
+        "about": "Revestimientos.",
+        "hourly_rate": {
+            "min": 11,
+            "max": 24
+        }
+    },
+    {
+        "id": "p49",
+        "name": "Juan Martinez",
+        "email": "juan.m@truber.com",
+        "password": "1234",
+        "type": "electric",
+        "role": "provider",
+        "rating": 4.9,
+        "jobs": 85,
+        "latitude": 10.343,
+        "longitude": -67.032,
+        "image": "https://randomuser.me/api/portraits/men/53.jpg",
+        "about": "Alta tensión.",
+        "hourly_rate": {
+            "min": 16,
+            "max": 29
+        }
+    },
+    {
+        "id": "p50",
+        "name": "Marta Sanchez",
+        "email": "marta.s@truber.com",
+        "password": "1234",
+        "type": "plumbing",
+        "role": "provider",
+        "rating": 4.7,
+        "jobs": 30,
+        "latitude": 10.341,
+        "longitude": -67.044,
+        "image": "https://randomuser.me/api/portraits/women/53.jpg",
+        "about": "Plomería industrial.",
+        "hourly_rate": {
+            "min": 17,
+            "max": 31
+        }
+    }
+]

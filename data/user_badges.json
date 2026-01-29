@@ -1,0 +1,30 @@
+[
+    {
+        "userId": "p1",
+        "badgeId": "b1"
+    },
+    {
+        "userId": "p1",
+        "badgeId": "b2"
+    },
+    {
+        "userId": "p1",
+        "badgeId": "b3"
+    },
+    {
+        "userId": "p2",
+        "badgeId": "b1"
+    },
+    {
+        "userId": "p2",
+        "badgeId": "b5"
+    },
+    {
+        "userId": "p3",
+        "badgeId": "b1"
+    },
+    {
+        "userId": "p3",
+        "badgeId": "b4"
+    }
+]
