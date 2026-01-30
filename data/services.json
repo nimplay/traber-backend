@@ -1,0 +1,51 @@
+[
+    {
+        "id": "s1",
+        "name": "Electricista",
+        "slug": "electric",
+        "icon": "zap",
+        "description": "Reparaciones eléctricas, instalaciones y mantenimiento."
+    },
+    {
+        "id": "s2",
+        "name": "Plomero",
+        "slug": "plumbing",
+        "icon": "droplets",
+        "description": "Fugas de agua, tuberías, grifos y sanitarios."
+    },
+    {
+        "id": "s3",
+        "name": "Mecánico",
+        "slug": "mechanic",
+        "icon": "settings",
+        "description": "Reparación de vehículos y mantenimiento preventivo."
+    },
+    {
+        "id": "s4",
+        "name": "Carpintero",
+        "slug": "carpentry",
+        "icon": "hammer",
+        "description": "Trabajos en madera, muebles y estructuras."
+    },
+    {
+        "id": "s5",
+        "name": "Limpieza",
+        "slug": "cleaning",
+        "icon": "sparkles",
+        "description": "Servicios de limpieza para hogares y oficinas."
+    },
+    {
+        "id": "s6",
+        "name": "Albañil",
+        "slug": "construction",
+        "icon": "hard-hat",
+        "description": "Construcción, reformas y reparaciones de obra."
+    },
+    {
+        "id": "s7",
+        "name": "Pintor",
+        "slug": "painting",
+        "icon": "paint-bucket",
+        "description": "Pintura de interiores y exteriores."
+    }
+]

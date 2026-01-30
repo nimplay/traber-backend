@@ -25,8 +25,21 @@ def seed_db():
         reviews_data = load_json('reviews.json')
         badges_data = load_json('badges.json')
         user_badges_data = load_json('user_badges.json')
+        services_data = load_json('services.json')
 
-        # 1. Seed Badges
+        # 1. Seed Services
+        for s in services_data:
+            service = models.Service(
+                id=s['id'],
+                name=s['name'],
+                slug=s['slug'],
+                icon=s['icon'],
+                description=s.get('description')
+            )
+            db.add(service)
+        db.commit()
+
+        # 2. Seed Badges
         badge_objs = {}
         for b in badges_data:
             badge = models.Badge(id=b['id'], name=b['name'], icon=b['icon'])
@@ -34,7 +47,7 @@ def seed_db():
             badge_objs[b['id']] = badge
         db.commit()
 
-        # 2. Seed Users
+        # 3. Seed Users
         user_objs = {}
         for u in users_data:
             createdAt = datetime.fromisoformat(u['createdAt'].replace('Z', '+00:00')) if 'createdAt' in u else datetime.utcnow()
@@ -67,7 +80,7 @@ def seed_db():
             user_objs[u['id']] = user
         db.commit()
 
-        # 3. Seed Portfolio
+        # 4. Seed Portfolio
         for p in portfolio_data:
             item = models.PortfolioItem(
                 id=p['id'],
@@ -78,7 +91,7 @@ def seed_db():
             )
             db.add(item)
         
-        # 4. Seed Reviews
+        # 5. Seed Reviews
         for r in reviews_data:
             review = models.Review(
                 id=r['id'],

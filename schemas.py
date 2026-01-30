@@ -10,6 +10,16 @@ class BadgeBase(BaseModel):
     class Config:
         from_attributes = True
 
+class ServiceBase(BaseModel):
+    id: str
+    name: str
+    slug: str
+    icon: str
+    description: Optional[str] = None
+
+    class Config:
+        from_attributes = True
+
 class PortfolioBase(BaseModel):
     id: Optional[str] = None
     imageUrl: str
@@ -88,6 +98,11 @@ class JobRequestBase(BaseModel):
     longitude: float
     request_type: str = "open"
     status: str = "pending"
+    images: Optional[List[str]] = None
+    candidates: Optional[List[str]] = []
+    milestones: Optional[List[dict]] = []
+    proposal_status: Optional[str] = "none"
+    budget_final: Optional[float] = None
     createdAt: Optional[datetime] = None
 
     class Config:
@@ -102,8 +117,14 @@ class JobRequestCreate(BaseModel):
     latitude: float
     longitude: float
     request_type: str = "open"
+    images: Optional[List[str]] = None
     providerId: Optional[str] = None
 
 class JobRequestResponse(JobRequestBase):
     client: Optional[UserBase] = None
     provider: Optional[UserBase] = None
+
+class ProposalUpdate(BaseModel):
+    milestones: List[dict]
+    budget_final: float
+    proposal_status: str

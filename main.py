@@ -90,6 +90,10 @@ def update_portfolio(user_id: str, portfolio: List[schemas.PortfolioBase], db: S
 def get_badges(db: Session = Depends(get_db)):
     return db.query(models.Badge).all()
 
+@app.get("/services", response_model=List[schemas.ServiceBase])
+def get_services(db: Session = Depends(get_db)):
+    return db.query(models.Service).all()
+
 @app.post("/job-requests", response_model=schemas.JobRequestResponse)
 def create_job_request(request: schemas.JobRequestCreate, userId: str, db: Session = Depends(get_db)):
     # Check if direct request has providerId
@@ -122,13 +126,22 @@ def get_job_requests(type: Optional[str] = None, db: Session = Depends(get_db)):
 
 @app.get("/users/{user_id}/requests", response_model=List[schemas.JobRequestResponse])
 def get_user_requests(user_id: str, db: Session = Depends(get_db)):
-    # Return requests where user is client OR provider
-    return db.query(models.JobRequest).options(
+    # Fetch all jobs to robustly check candidates JSON in Python (SQLite limitation workaround)
+    all_jobs = db.query(models.JobRequest).options(
         joinedload(models.JobRequest.client),
         joinedload(models.JobRequest.provider)
-    ).filter(
-        (models.JobRequest.clientId == user_id) | (models.JobRequest.providerId == user_id)
     ).order_by(models.JobRequest.createdAt.desc()).all()
+    
+    relevant_jobs = []
+    for job in all_jobs:
+        is_client = job.clientId == user_id
+        is_provider = job.providerId == user_id
+        is_candidate = job.candidates and user_id in job.candidates
+        
+        if is_client or is_provider or is_candidate:
+            relevant_jobs.append(job)
+            
+    return relevant_jobs
 
 @app.get("/job-requests/{job_id}", response_model=schemas.JobRequestResponse)
 def get_job_request(job_id: str, db: Session = Depends(get_db)):
@@ -150,6 +163,44 @@ def update_job_status(job_id: str, status: str, db: Session = Depends(get_db)):
     db.commit()
     return {"message": f"Job status updated to {status}"}
 
+@app.put("/job-requests/{job_id}/proposal")
+def update_proposal(job_id: str, proposal: schemas.ProposalUpdate, db: Session = Depends(get_db)):
+    job = db.query(models.JobRequest).filter(models.JobRequest.id == job_id).first()
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+    
+    job.milestones = proposal.milestones
+    job.budget_final = proposal.budget_final
+    job.proposal_status = proposal.proposal_status
+    
+    db.commit()
+    return {"message": "Proposal updated"}
+
+@app.put("/job-requests/{job_id}/apply")
+def apply_to_job(job_id: str, provider_id: str, db: Session = Depends(get_db)):
+    job = db.query(models.JobRequest).filter(models.JobRequest.id == job_id).first()
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+    
+    current_candidates = list(job.candidates) if job.candidates else []
+    if provider_id not in current_candidates:
+        current_candidates.append(provider_id)
+        job.candidates = current_candidates
+        db.commit()
+    
+    return {"message": "Applied successfully"}
+
+@app.put("/job-requests/{job_id}/assign")
+def assign_provider(job_id: str, provider_id: str, db: Session = Depends(get_db)):
+    job = db.query(models.JobRequest).filter(models.JobRequest.id == job_id).first()
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+    
+    job.providerId = provider_id
+    # We don't change status to in_process yet, that happens after deposit
+    db.commit()
+    return {"message": "Provider assigned"}
+
 @app.put("/job-requests/{job_id}/accept")
 def accept_job(job_id: str, provider_id: str, db: Session = Depends(get_db)):
     job = db.query(models.JobRequest).filter(models.JobRequest.id == job_id).first()
@@ -163,3 +214,26 @@ def accept_job(job_id: str, provider_id: str, db: Session = Depends(get_db)):
     job.status = "accepted"
     db.commit()
     return {"message": "Job accepted successfully"}
+@app.delete("/job-requests/{job_id}")
+def delete_job_request(job_id: str, db: Session = Depends(get_db)):
+    job = db.query(models.JobRequest).filter(models.JobRequest.id == job_id).first()
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+    
+    db.delete(job)
+    db.commit()
+    return {"message": "Job request deleted successfully"}
+
+@app.put("/job-requests/{job_id}", response_model=schemas.JobRequestResponse)
+def update_job_request(job_id: str, updates: schemas.JobRequestCreate, db: Session = Depends(get_db)):
+    job = db.query(models.JobRequest).filter(models.JobRequest.id == job_id).first()
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+    
+    update_data = updates.dict(exclude_unset=True)
+    for key, value in update_data.items():
+        setattr(job, key, value)
+    
+    db.commit()
+    db.refresh(job)
+    return job

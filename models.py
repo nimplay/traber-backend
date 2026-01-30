@@ -71,6 +71,15 @@ class Badge(Base):
 
     users = relationship("User", secondary=user_badges, back_populates="badges")
 
+class Service(Base):
+    __tablename__ = "services"
+
+    id = Column(String, primary_key=True, index=True)
+    name = Column(String) # For display, e.g., 'Electricista'
+    slug = Column(String, unique=True) # For code reference, e.g., 'electric'
+    icon = Column(String) # Icon name or identifier
+    description = Column(String, nullable=True)
+
 class JobRequest(Base):
     __tablename__ = "job_requests"
 
@@ -86,6 +95,11 @@ class JobRequest(Base):
     longitude = Column(Float)
     request_type = Column(String, default="open") # 'open' (map) or 'direct' (private)
     status = Column(String, default="pending")  # 'pending', 'accepted', 'rejected', 'in_process', 'completed', 'cancelled'
+    images = Column(JSON, nullable=True) # List of image strings
+    candidates = Column(JSON, default=[]) # List of provider IDs who applied
+    milestones = Column(JSON, default=[]) # List of {id, description, amount, status}
+    proposal_status = Column(String, default="none") # 'none', 'sent', 'rejected', 'accepted'
+    budget_final = Column(Float, nullable=True)
     createdAt = Column(DateTime, default=datetime.datetime.utcnow)
 
     client = relationship("User", foreign_keys=[clientId])
